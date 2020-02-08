@@ -1,0 +1,12 @@
+on: push
+
+name: Linting
+
+jobs:
+  client-test:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run Lint
+        run: ./dev/lint.sh
